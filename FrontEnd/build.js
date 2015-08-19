@@ -14,7 +14,7 @@ var syncfs = require('fs-sync');
 
 console.log('Copying files to install directory.')
 var Source = path.resolve(__dirname, 'public');
-var Dest = path.resolve(__dirname, '..', '_bin', 'Malkovich Windows', 'www');
+var Dest = path.resolve(__dirname, '..', '_bin', 'Malkovich Windows', 'www', 'public');
 syncfs.remove(Dest);
 syncfs.copy(Source, Dest, null);
 

@@ -25,7 +25,7 @@ console.log('Building the server...');
 exec('go build');
 
 var Source = path.resolve(MalkovichServerSourceDir, 'MicroNote.exe');
-var Dest = path.resolve(__dirname, '..', '_bin', 'Malkovich Windows', 'Malkovich Cli.exe');	
+var Dest = path.resolve(__dirname, '..', '_bin', 'Malkovich Windows', 'MalkovichCLI.exe');	
 syncfs.remove(Dest);
 cp(Source, Dest);
 

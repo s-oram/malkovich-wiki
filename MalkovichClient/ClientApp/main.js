@@ -38,7 +38,7 @@ app.on('ready', function() {
   mainWindow.show();
 
   // Open the devtools.
-  mainWindow.openDevTools();
+  //mainWindow.openDevTools();
 
   //shell.openExternal('https://github.com');
   //console.log(__dirname);
