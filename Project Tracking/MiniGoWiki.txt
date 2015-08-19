@@ -1,0 +1,204 @@
+=======================================
+
+Malkovich Forum Database
+
+database name: vam_malk_forum
+database user: vam_malk_forum
+database pass: virelsdi123jvifd$#@vjidf@!!vuf##asef#dff
+
+Forum Admin Account
+
+username: raytracer
+password: zebra66
+
+=======================================
+    Piwik
+=======================================
+Malkovich Piwik Database
+
+database name: vam_malk_piwik
+database user: vam_malk_piwik
+database pass: virelsdi12iiosdfgiywery782@!!vuf##asef#dff
+
+Piwik Super User
+
+username: raytracer
+password: poptart88
+
+=======================================
+Single page app rewite.
+
+Need:
+- need to shuffle the project around
+  so the GUI/web files are being
+  served by the Go server. It will be
+  too much messing around to make the change
+  otherwise when trying to go into production 
+  mode.
+
+- Might need to use a different client side router. 
+  Maybe not however... dunno.
+
+
+=======================================
+
+
+=======================================
+TODO
+- add a footer showing the version number.
+- add a link to the help documents in the footer.
+- add a Markdown syntax summary on the edit page.
+- need to create the install scripts.
+- need to create icon for "Malkovich.exe"
+- need to create icon for the Malkovich window.
+- need to add some input validation when choosing a document name.
+- file downloads need to force the file download, not link to it, otherwise
+  the file will be opened by default.
+==================================
+
+Mini-Go-Wiki
+
+1) Create a go application that can render markdown files as html. 
+-- use https://github.com/julienschmidt/httprouter for the router.
+-- black friday for the markdown renderer.
+https://github.com/russross/blackfriday
+
+
+
+Hugo could possibly be used for the front end stuff... 
+or need to work out how to render templates with Go and
+use go for everything. 
+
+
+
+have worked out how to serve static files. It might make sense to use
+html and javascript on the client side. Hugo can be used. 
+The use a rest api for the backend.
+
+
+
+Jeditable for edit in place jquery plugin.
+http://www.appelsiini.net/projects/jeditable
+
+
+MarkIt up. HTML markdown editor.
+http://markitup.jaysalvat.com/home/
+
+
+Inplace javascript text editors.
+http://www.alohaeditor.org/Content.Node/index.html
+http://hallojs.org/
+
+DropZone Drag and drop file uploading.
+http://www.dropzonejs.com/
+
+HeadJS. 
+http://headjs.com/
+
+https://github.com/miguel-perez/smoothState.js
+
+
+http://terrymun.github.io/Fluidbox/
+
+
+CMaaS
+https://www.contentful.com/features/
+
+
+
+
+===============
+Useful
+===============
+
+Book on building single page web apps.
+https://singlepagebook.supportbee.com/
+
+Might be useful to use ReaktJS or KnockoutJS in the future.
+
+
+
+Html components.
+https://github.com/joshuagatcke/HTML-KickStart
+
+
+Ajile: Asynchronous javaScript importing & loading extension
+http://ajile.net/
+
+
+
+
+Ajax File Upload via drag and drop.
+http://tutorialzine.com/2013/05/mini-ajax-file-upload-form/
+
+
+Bootflat UI library
+http://bootflat.github.io/documentation.html
+
+TopCoat HTML UI Library
+http://topcoat.io/topcoat/topcoat-desktop-light.html
+
+
+Go with Node-Webkit
+http://learningtolearn.sndrs.ca/blog/2015-03-09-building-desktop-applications-using-go-and-nwjs/
+http://godoc.org/github.com/lonnc/golang-nw
+
+
+DebugApp
+http://www.debuggap.com/
+
+https://github.com/mllrsohn/node-webkit-builder
+
+
+https://turtl.it/
+
+
+Client Side routing.
+http://sammyjs.org/
+
+
+
+Visual Studio Code editor has go support. Might be worth checking out.
+https://code.visualstudio.com/Docs
+
+
+Electron.
+https://github.com/atom/electron
+
+Electron Quick Start
+https://github.com/atom/electron/blob/master/docs/tutorial/quick-start.md
+
+
+http://stackoverflow.com/questions/29932291/how-to-find-the-ports-that-is-being-used-by-a-process-in-golang-or-in-general
+
+
+
+Manners - Gracefully shutdown go server 
+https://www.progville.com/go/manners-gracefully-shutdown-go-server/
+
+golang WaitGroup() a function to enable waiting until a function finishes.
+
+
+
+https://smashware.com/articles/2013/06/07/setting-icon-of-go-executables-in-windows
+
+
+
+Mybb forum system.
+http://www.mybb.com/
+
+Slack Wiki
+https://medium.com/why-not/our-slack-wiki-e4f6d23a3495
+
+Wikitten
+http://wikitten.vizuina.com/Sample%20Markdown%20document.md
+
+Pixi.js WebGL renderer. Might be useful for displaying formatted markdown.
+http://pixijs.github.io/docs/PIXI.Text.html
+
+Possible website design reference.
+http://www.applicake.com/what-we-do
+
+
+Attack JS to dom nodes without using CSS class names.
+https://github.com/nicbell/attach.js
