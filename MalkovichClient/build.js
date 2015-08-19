@@ -1,3 +1,5 @@
+"use strict"
+
 var WindowsElectronDir = 'electron-v0.30.4-win32-ia32';
 var ClientAppDir = 'ClientApp';
 
