@@ -3,7 +3,6 @@
 var path = require('path');
 var fs = require('fs.extra');
 var syncfs = require('fs-sync');
-
 require('shelljs/global');
 
 // Change the working directory. 
@@ -32,11 +31,3 @@ cp(Source, Dest);
 
 
 console.log('==script complete==');
-
-
-
-
-
-
-
-
