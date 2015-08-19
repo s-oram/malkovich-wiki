@@ -1,0 +1,20 @@
+icon-modern {
+    delete
+}
+
+
+.modern-icon {
+    background-size: 32px 32px;
+    background-image: url('/vendor/ModernIcons/WindowsPhone/svg/appbar.delete.svg');
+    background-position: center;
+    pointer-events: none;
+}
+.modern-icon:before {
+    display: inline-block;
+    content: ' ';
+    height: 1em;
+    width: 1em;
+}
+
+
+

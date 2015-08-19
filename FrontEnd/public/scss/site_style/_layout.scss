@@ -1,0 +1,22 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  color: #3D3C40;
+  //background-color: #E9E9E9;
+}
+
+html {
+  // always show scroll bars.
+  overflow-y: scroll;
+}
+
+body {
+  @include FGContainer;
+}
+
+
+div#FullPageContainer {
+
+}
+
+

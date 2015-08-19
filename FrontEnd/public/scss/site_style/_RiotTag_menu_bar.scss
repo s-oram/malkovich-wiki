@@ -1,0 +1,84 @@
+/*
+
+
+$Menu_HalfColor: #AB9BA9;
+$Menu_34Color: #D3C1D3;
+$Menu_FullColor: #D8D2D8;
+
+div.MenuBarButton {
+  @include MenuBarElement;
+  border-color:  $Menu_HalfColor;
+  &:hover {
+    color: $Menu_FullColor;
+    cursor: pointer;
+  }
+  span.ButtonText {
+    pointer-events: none;
+  }
+}
+
+div.MenuBarFlexButton {
+  @extend div.MenuBarButton;
+  width: auto;
+}
+
+*/
+
+@mixin MenuBarElement {
+  box-sizing: content-box;
+  width: 1.8em;
+  height: 1.4em;
+  border-radius: 3px;
+  line-height: 1.4em;
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+  &:first-of-type{
+    margin-left: 0;
+  }
+  &:last-of-type{
+    margin-right: 0;
+  }
+}
+
+menubar.MainMenuBar {
+  justify-content: space-between;
+  padding: 0 10px;
+  border-bottom: 1px solid lightgrey;
+
+  div.MenuBarElement {
+    @include MenuBarElement;
+    width: auto;
+  }
+
+  div.MenuBarFlexButton {
+    @include MenuBarElement;
+    padding: 0 0.3em;
+    margin-left: -0.05em;
+    margin-right: -0.05em;
+
+    &:first-of-type{
+      margin-left: -0.3em;
+    }
+    &:last-of-type{
+      margin-right: -0.3em;
+    }
+
+
+    width: auto;
+    span.ButtonText {
+      pointer-events: none;
+    }
+    cursor: pointer;
+    user-select: none;
+
+    &:hover{
+      background-color: black;
+      color: white;
+    }
+  }
+
+}
+

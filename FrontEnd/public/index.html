@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+
+    <meta name="description" content="">
+
+    <!-- Mobile-friendly viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="vendor/bootstrap-3.3.5/css/bootstrap.css" rel="stylesheet" media="all">
+
+    <!-- modern icons -->
+    <link href="vendor/ModernIcons/modern-icons.css" rel="stylesheet" media="all">
+    <script src="vendor/ModernIcons/modern-icons.js"></script>
+
+    <!-- Style sheet link -->
+    <link href="css/vam_style.css" rel="stylesheet" media="all">
+    <link href="css/site_style.css" rel="stylesheet" media="all">
+    <link href="css/RiotDialogs.css" rel="stylesheet" media="all">
+</head>
+<body>
+    <div id="FullPageContainer" class="FGContainerGrow FGRows">
+        <div class="MainMenu FGCellShrink">
+            <menubar></menubar>
+        </div>
+        <div class="main-content-container FGContainer FGCellGrow">
+            <docview></docview>
+            <docedit></docedit>
+        </div>
+        <!--
+        <div class="FooterBar FGContainer FGCellShrink">
+            Footer
+        </div>
+        -->
+
+    </div>
+
+    <!-- Include all the riot pop-up dialogs here -->
+    <riotdialog-message></riotdialog-message>
+    <page-settings-menu></page-settings-menu>
+    <!-- ======================================= -->
+
+    <script src="js/functions.js"></script>
+
+    <script src="vendor/jquery/jquery-1.11.2.min.js"></script>
+    <script src="vendor/jquery/jquery.ajax-form.js"></script>
+    <script src="vendor/jquery/jquery.serialize-object.js"></script>
+    <script src="vendor/jquery/jquery.wait.js"></script>
+    <script src="vendor/filedrop/filedrop.js"></script>
+    <script src="vendor/skate/skate.min.js"></script>
+    <script src="vendor/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <script src="vendor/sprintf/sprintf.js"></script>
+    <script src="vendor/lodash-v3/lodash.js"></script>
+
+    <script src="js/RiotDialogs.js"></script>
+
+    <script src="vendor/riotjs/riot+compiler.js"></script>
+    <script src="tags/todo.js" type="riot/tag"></script>
+    <script src="tags/MenuBar.js" type="riot/tag"></script>
+    <script src="tags/DocView.js" type="riot/tag"></script>
+    <script src="tags/DocEdit.js" type="riot/tag"></script>
+    <script src="tags/DocEdit_SideBar.js" type="riot/tag"></script>
+    <script src="tags/DocEdit_FileBrowser.js" type="riot/tag"></script>
+    <script src="tags/Dialog_Message.js" type="riot/tag"></script>
+    <script src="tags/menus/PageSettingsMenu.js" type="riot/tag"></script>
+    <script src="js/controllers/DialogController.js"></script>
+    <script src="js/stores/Page.js"></script>
+    <script src="js/stores/PageFiles.js"></script>
+
+    <script src="app_config.js"></script>
+    <script src="js/app_modules/DocModule.js"></script>
+    <script src="js/RiotTagExt.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
