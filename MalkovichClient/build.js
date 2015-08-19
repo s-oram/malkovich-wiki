@@ -6,21 +6,16 @@ var ClientAppDir = 'ClientApp';
 console.log('Building Malkovich Client');
 
 var path = require('path');
-var tinylr = require('tiny-lr');
 var fs = require('fs.extra');
+var fsExtra = require('node-fs-extra');
 var syncfs = require('fs-sync');
+
+require('shelljs/global');
 
 
 //==== Build the windows client app ====
 (function(){	
-	var ElectronDir = path.resolve(__dirname, WindowsElectronDir);
-
-	// Rename the executable.
-	var Source = path.resolve(ElectronDir, 'electron.exe');
-	var Dest = path.resolve(ElectronDir, 'Malovich Client.exe');
-	if (fs.existsSync(Dest) == false){
-		fs.renameSync(Source, Dest);		
-	}	
+	var ElectronDir = path.resolve(__dirname, WindowsElectronDir);	
 
 	// Copy the application files.
 	console.log('Copy application files...');
@@ -29,15 +24,21 @@ var syncfs = require('fs-sync');
 	syncfs.remove(Dest);
 	syncfs.copy(Source, Dest, null);
 
-
 	// Copy the prepared Client wrapper files to install directory...
 	console.log('Copy files to install directory...');
-	var Source = ElectronDir;
-	var Dest = path.resolve(__dirname, '..', '_bin', 'Malkovich Windows', 'Client');
-	//console.log(Source);
-	//console.log(Dest);
+	var Source = path.resolve(ElectronDir);
+	var Dest = path.resolve(__dirname, '..', '_bin', 'Malkovich Windows', 'client');	
 	syncfs.remove(Dest);
-	syncfs.copy(Source, Dest, null);
+	fsExtra.copySync(Source, Dest);
+
+	
+
+	// Rename the executable.	
+	console.log('Rename the executable...')
+	var Source = path.resolve(__dirname, '..', '_bin', 'Malkovich Windows', 'client', 'electron.exe');
+	var Dest = path.resolve(__dirname, '..', '_bin', 'Malkovich Windows', 'client', 'Malkovich Client.exe');	
+	fsExtra.copySync(Source, Dest);
+	fs.unlink(Source);	
 
 
 	console.log('==script complete==');
