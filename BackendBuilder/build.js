@@ -9,12 +9,6 @@ require('shelljs/global');
 var MalkovichServerSourceDir = path.resolve('c:', 'GoHomeDir', 'src', 'MicroNote');	
 cd(MalkovichServerSourceDir);
 
-
-// Build the server. 
-//console.log('Building the server...');
-//exec('go build -ldflags "-H windowsgui"');
-
-
 (function(){	
 	var commandA;
 	var commandB;
@@ -33,7 +27,7 @@ cd(MalkovichServerSourceDir);
 	commandB = commandB.replace('{ARCH}', arch);
 	commandB = commandB.replace('{ARCH}', arch);	
 
-	//exec('env GOOS=windows GOARCH=386 go build -o _bin/windows/386/MalkovichCLI.exe');
+	
 	console.log('Building server for windows...');	
 	exec(commandA);
 	console.log('Building CLI server for windows...');	
@@ -53,40 +47,59 @@ cd(MalkovichServerSourceDir);
 	commandA = commandA.replace('{ARCH}', arch);
 	commandA = commandA.replace('{ARCH}', arch);	
 
-	commandB = 'env GOOS={PLAT} GOARCH={ARCH} go build -o _bin/{PLAT}/{ARCH}/Malkovich -ldflags "-H windowsgui"';
+	commandB = 'env GOOS={PLAT} GOARCH={ARCH} go build -o _bin/{PLAT}/{ARCH}/Malkovich';
 	commandB = commandB.replace('{PLAT}', platform);
 	commandB = commandB.replace('{PLAT}', platform);
 	commandB = commandB.replace('{ARCH}', arch);
 	commandB = commandB.replace('{ARCH}', arch);	
-
-	//exec('env GOOS=windows GOARCH=386 go build -o _bin/windows/386/MalkovichCLI.exe');
+	
 	console.log('Building server for OSX...');	
 	exec(commandA);
 	console.log('Building CLI server for OSX...');	
 	exec(commandB);
 }.call());
 
-return;
-
-var Source ='';
-var Dest = '';
 
 
+var Source;
+var Dest;
 
 
-var Source = path.resolve(MalkovichServerSourceDir, 'MicroNote.exe');
-var Dest = path.resolve(__dirname, '..', '_bin', 'Malkovich Windows', 'Malkovich.exe');	
+//==== Copy windows files to install directory =====
+Source = path.resolve(MalkovichServerSourceDir, '_bin/windows/386/Malkovich.exe');
+Dest = path.resolve(__dirname, '..', '_bin', 'Malkovich Windows', 'Malkovich.exe');	
+syncfs.remove(Dest);
+cp(Source, Dest);
+
+Source = path.resolve(MalkovichServerSourceDir, '_bin/windows/386/MalkovichCLI.exe');
+Dest = path.resolve(__dirname, '..', '_bin', 'Malkovich Windows', 'MalkovichCLI.exe');	
+syncfs.remove(Dest);
+cp(Source, Dest);
+
+//==== Copy OSX files to install directory =====
+Source = path.resolve(MalkovichServerSourceDir, '_bin/darwin/386/Malkovich');
+Dest = path.resolve(__dirname, '..', '_bin', 'Malkovich Darwin', 'Malkovich');	
+syncfs.remove(Dest);
+cp(Source, Dest);
+
+Source = path.resolve(MalkovichServerSourceDir, '_bin/darwin/386/MalkovichCLI');
+Dest = path.resolve(__dirname, '..', '_bin', 'Malkovich Darwin', 'MalkovichCLI');	
+syncfs.remove(Dest);
+cp(Source, Dest);
+
+//==== Copy OSX files to Mac Share directory =====
+Source = path.resolve(MalkovichServerSourceDir, '_bin/darwin/386/Malkovich');
+Dest = 'Z:/OSX Share/Malkovich/Malkovich';	
+syncfs.remove(Dest);
+cp(Source, Dest);
+
+Source = path.resolve(MalkovichServerSourceDir, '_bin/darwin/386/MalkovichCLI');
+Dest = 'Z:/OSX Share/Malkovich/MalkovichCLI';	
 syncfs.remove(Dest);
 cp(Source, Dest);
 
 
-console.log('Building the server...');
-exec('go build');
 
-var Source = path.resolve(MalkovichServerSourceDir, 'MicroNote.exe');
-var Dest = path.resolve(__dirname, '..', '_bin', 'Malkovich Windows', 'MalkovichCLI.exe');	
-syncfs.remove(Dest);
-cp(Source, Dest);
 
 
 
