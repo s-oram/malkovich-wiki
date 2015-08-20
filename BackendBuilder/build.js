@@ -3,7 +3,7 @@
 var path = require('path');
 var fs = require('fs.extra');
 var syncfs = require('fs-sync');
-require('shelljs/global');
+var shell = require('shelljs');
 
 // Change the working directory. 
 var MalkovichServerSourceDir = path.resolve('c:', 'GoHomeDir', 'src', 'MicroNote');	
@@ -29,9 +29,9 @@ cd(MalkovichServerSourceDir);
 
 	
 	console.log('Building server for windows...');	
-	exec(commandA);
+	shell.exec(commandA);
 	console.log('Building CLI server for windows...');	
-	exec(commandB);
+	shell.exec(commandB);
 }.call());
 
 
@@ -54,9 +54,9 @@ cd(MalkovichServerSourceDir);
 	commandB = commandB.replace('{ARCH}', arch);	
 	
 	console.log('Building server for OSX...');	
-	exec(commandA);
+	shell.exec(commandA);
 	console.log('Building CLI server for OSX...');	
-	exec(commandB);
+	shell.exec(commandB);
 }.call());
 
 
@@ -69,34 +69,34 @@ var Dest;
 Source = path.resolve(MalkovichServerSourceDir, '_bin/windows/386/Malkovich.exe');
 Dest = path.resolve(__dirname, '..', '_bin', 'Malkovich Windows', 'Malkovich.exe');	
 syncfs.remove(Dest);
-cp(Source, Dest);
+shell.cp(Source, Dest);
 
 Source = path.resolve(MalkovichServerSourceDir, '_bin/windows/386/MalkovichCLI.exe');
 Dest = path.resolve(__dirname, '..', '_bin', 'Malkovich Windows', 'MalkovichCLI.exe');	
 syncfs.remove(Dest);
-cp(Source, Dest);
+shell.cp(Source, Dest);
 
 //==== Copy OSX files to install directory =====
 Source = path.resolve(MalkovichServerSourceDir, '_bin/darwin/386/Malkovich');
 Dest = path.resolve(__dirname, '..', '_bin', 'Malkovich Darwin', 'Malkovich');	
 syncfs.remove(Dest);
-cp(Source, Dest);
+shell.cp(Source, Dest);
 
 Source = path.resolve(MalkovichServerSourceDir, '_bin/darwin/386/MalkovichCLI');
 Dest = path.resolve(__dirname, '..', '_bin', 'Malkovich Darwin', 'MalkovichCLI');	
 syncfs.remove(Dest);
-cp(Source, Dest);
+shell.cp(Source, Dest);
 
 //==== Copy OSX files to Mac Share directory =====
 Source = path.resolve(MalkovichServerSourceDir, '_bin/darwin/386/Malkovich');
 Dest = 'Z:/OSX Share/Malkovich/Malkovich';	
 syncfs.remove(Dest);
-cp(Source, Dest);
+shell.cp(Source, Dest);
 
 Source = path.resolve(MalkovichServerSourceDir, '_bin/darwin/386/MalkovichCLI');
 Dest = 'Z:/OSX Share/Malkovich/MalkovichCLI';	
 syncfs.remove(Dest);
-cp(Source, Dest);
+shell.cp(Source, Dest);
 
 
 
