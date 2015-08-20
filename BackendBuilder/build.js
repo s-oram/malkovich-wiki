@@ -81,29 +81,26 @@ Source = path.resolve(MalkovichServerSourceDir, '_bin/darwin/386/Malkovich');
 Dest = path.resolve(__dirname, '..', '_bin', 'Malkovich Darwin', 'Malkovich');	
 syncfs.remove(Dest);
 shell.cp(Source, Dest);
-shell.chmod('+x', Dest);
+//shell.chmod('+x', Dest);
 
 Source = path.resolve(MalkovichServerSourceDir, '_bin/darwin/386/MalkovichCLI');
 Dest = path.resolve(__dirname, '..', '_bin', 'Malkovich Darwin', 'MalkovichCLI');	
 syncfs.remove(Dest);
 shell.cp(Source, Dest);
-shell.chmod('+x', Dest);
+//shell.chmod('+x', Dest);
 
 //==== Copy OSX files to Mac Share directory =====
 Source = path.resolve(MalkovichServerSourceDir, '_bin/darwin/386/Malkovich');
 Dest = 'Z:/OSX Share/Malkovich/Malkovich';	
 syncfs.remove(Dest);
 shell.cp(Source, Dest);
-shell.chmod('+x', Dest);
+//shell.chmod('+x', Dest);
 
 Source = path.resolve(MalkovichServerSourceDir, '_bin/darwin/386/MalkovichCLI');
 Dest = 'Z:/OSX Share/Malkovich/MalkovichCLI';	
 syncfs.remove(Dest);
 shell.cp(Source, Dest);
-shell.chmod('+x', Dest);
-
-
-
+//shell.chmod('+x', Dest);
 
 
 
