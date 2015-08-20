@@ -7,7 +7,7 @@ var shell = require('shelljs');
 
 // Change the working directory. 
 var MalkovichServerSourceDir = path.resolve('c:', 'GoHomeDir', 'src', 'MicroNote');	
-cd(MalkovichServerSourceDir);
+shell.cd(MalkovichServerSourceDir);
 
 (function(){	
 	var commandA;
@@ -29,9 +29,9 @@ cd(MalkovichServerSourceDir);
 
 	
 	console.log('Building server for windows...');	
-	shell.exec(commandA);
+	//shell.exec(commandA);
 	console.log('Building CLI server for windows...');	
-	shell.exec(commandB);
+	//shell.exec(commandB);
 }.call());
 
 
@@ -54,9 +54,9 @@ cd(MalkovichServerSourceDir);
 	commandB = commandB.replace('{ARCH}', arch);	
 	
 	console.log('Building server for OSX...');	
-	shell.exec(commandA);
+	//shell.exec(commandA);
 	console.log('Building CLI server for OSX...');	
-	shell.exec(commandB);
+	//shell.exec(commandB);
 }.call());
 
 
@@ -81,22 +81,26 @@ Source = path.resolve(MalkovichServerSourceDir, '_bin/darwin/386/Malkovich');
 Dest = path.resolve(__dirname, '..', '_bin', 'Malkovich Darwin', 'Malkovich');	
 syncfs.remove(Dest);
 shell.cp(Source, Dest);
+shell.chmod('+x', Dest);
 
 Source = path.resolve(MalkovichServerSourceDir, '_bin/darwin/386/MalkovichCLI');
 Dest = path.resolve(__dirname, '..', '_bin', 'Malkovich Darwin', 'MalkovichCLI');	
 syncfs.remove(Dest);
 shell.cp(Source, Dest);
+shell.chmod('+x', Dest);
 
 //==== Copy OSX files to Mac Share directory =====
 Source = path.resolve(MalkovichServerSourceDir, '_bin/darwin/386/Malkovich');
 Dest = 'Z:/OSX Share/Malkovich/Malkovich';	
 syncfs.remove(Dest);
 shell.cp(Source, Dest);
+shell.chmod('+x', Dest);
 
 Source = path.resolve(MalkovichServerSourceDir, '_bin/darwin/386/MalkovichCLI');
 Dest = 'Z:/OSX Share/Malkovich/MalkovichCLI';	
 syncfs.remove(Dest);
 shell.cp(Source, Dest);
+shell.chmod('+x', Dest);
 
 
 
