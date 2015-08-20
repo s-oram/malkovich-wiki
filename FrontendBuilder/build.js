@@ -13,7 +13,7 @@ var syncfs = require('fs-sync');
 // the Riotjs tags and scss files. 
 
 console.log('Copying files to install directory.')
-var Source = path.resolve(__dirname, 'public');
+var Source = "C:/GoHomeDir/src/MicroNote/www/public";
 var Dest = path.resolve(__dirname, '..', '_bin', 'Malkovich Windows', 'www', 'public');
 syncfs.remove(Dest);
 syncfs.copy(Source, Dest, null);
