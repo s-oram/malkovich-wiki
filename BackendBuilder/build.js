@@ -29,9 +29,9 @@ shell.cd(MalkovichServerSourceDir);
 
 	
 	console.log('Building server for windows...');	
-	//shell.exec(commandA);
+	shell.exec(commandA);
 	console.log('Building CLI server for windows...');	
-	//shell.exec(commandB);
+	shell.exec(commandB);
 }.call());
 
 
@@ -54,9 +54,9 @@ shell.cd(MalkovichServerSourceDir);
 	commandB = commandB.replace('{ARCH}', arch);	
 	
 	console.log('Building server for OSX...');	
-	//shell.exec(commandA);
+	shell.exec(commandA);
 	console.log('Building CLI server for OSX...');	
-	//shell.exec(commandB);
+	shell.exec(commandB);
 }.call());
 
 
