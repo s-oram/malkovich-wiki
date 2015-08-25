@@ -12,3 +12,7 @@ https://github.com/atom/electron/blob/master/docs/tutorial/application-distribut
 
 download the latest app sources from: 
 https://github.com/atom/electron/releases
+
+
+Electron Doesn't work when unzipped with non-OSX archive utility.
+https://discuss.atom.io/t/dont-work-with-mac-osx-10-9-2/6019
