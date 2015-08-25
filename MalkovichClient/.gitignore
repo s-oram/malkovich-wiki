@@ -1,2 +1,3 @@
 /node_modules/
-/electron-v0.30.4-win32-ia32/
+/electron-*-win32-ia32/
+/electron-*-darwin-x64/
