@@ -1,0 +1,18 @@
+Malkovich is built from several parts.
+- A backend server built with Go. 
+- The Malkovich GUI client. Built with Electron, HTML and JS. 
+
+
+
+Building the Malkovich Client
+-----------------------------
+
+Application Distribution Guide.
+https://github.com/atom/electron/blob/master/docs/tutorial/application-distribution.md
+
+download the latest app sources from: 
+https://github.com/atom/electron/releases
+
+
+Electron Doesn't work when unzipped with non-OSX archive utility.
+https://discuss.atom.io/t/dont-work-with-mac-osx-10-9-2/6019

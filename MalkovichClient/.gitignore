@@ -1,0 +1,3 @@
+/node_modules/
+/electron-*-win32-ia32/
+/electron-*-darwin-x64/
