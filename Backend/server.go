@@ -108,22 +108,18 @@ func main() {
 	router.POST(FileRoutes["Command_ShowFile"], filesController.ShowFile)
 
 	//=== General file handling ===
-	if IsDevEnv {
-		wwwRoot := path.Join(exeRoot, "..", "Frontend", "public")
+	var wwwRoot string
+	if *IsDevEnv {
+		wwwRoot = exeRoot + path.Join("..", "Frontend", "public")
+		wwwRoot = filepath.Clean(wwwRoot)
+		// TODO:MED It would be good to check if the path exists here.
 	} else {
-		wwwRoot := path.Join(exeRoot, "www", "public")
+		wwwRoot = path.Join(exeRoot, "www", "public")
+		// TODO:MED It would be good to check if the path exists here.
 	}
 	wfs := webserver.New()
 	wfs.DocRoot = wwwRoot
 	router.NotFound = wfs.HandleNotFound
-
-	/*
-		fileserver := http.FileServer(http.Dir(wwwRoot))
-		NotFoundHandler := func(rw http.ResponseWriter, req *http.Request) {
-			fileserver.ServeHTTP(rw, req)
-		}
-		router.NotFound = NotFoundHandler
-	*/
 
 	chain := setupMiddleWareHandler(UseRequestLogger, router)
 

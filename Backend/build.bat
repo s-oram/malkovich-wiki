@@ -1,5 +1,5 @@
 ::==== For running the server for in browser development ====
-go build && MicroNote --server
+go build -o MicroNote.exe && MicroNote --server --dev
 ::go build && MicroNote
 
 ::==== for running the webkit =========
