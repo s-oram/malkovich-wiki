@@ -41,7 +41,7 @@ $h4-margin-bottom: 1 * $h4-line;
 docview {
   margin: 8px 10px 10px 10px;
 
-
+  //==== Vertical text rhythm ====
   h1 {
     font-size:     $h1-font-size;
     line-height:   $h1-line-height;
@@ -63,7 +63,7 @@ docview {
     margin-bottom: $h3-margin-bottom;
   }
 
-  h4 {
+  h4, h5, h6 {
     font-size:     $h4-font-size;
     line-height:   $h4-line-height;
     margin-top:    $h4-margin-top;
@@ -75,8 +75,50 @@ docview {
     margin-bottom: $base-line-height;
   }
 
+  //==== Element styling ====
+  code {
+    color: #111;
+    background-color: #eee;
+    font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,
+      DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
+  }
+
+  // Styling for inline code.
+  p code {
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+  }
+
+  // Styling for code blocks
+  pre code {
+    padding: 0.25em;
+    display: block;
+  }
+
+  blockquote {
+    background-color: #fff9e3;
+    border-left: 2px solid #ffeb8e;
+    padding: 0.5em;
+    margin: 0;
+
+    &>:first-child{
+      margin-top: 0;
+    }
+    &>:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
 }
 
-docview > :first-child {
+docview>:first-child {
   margin-top: 0;
 }
