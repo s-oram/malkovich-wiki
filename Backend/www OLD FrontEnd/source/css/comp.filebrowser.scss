@@ -1,0 +1,71 @@
+@import 'lib/sass_tools';
+@import 'global_styles';
+
+div.filebrowser {
+  flex-direction: column;
+  display: flex;
+
+  div.filebrowser-header {
+    position: relative;
+  }
+
+  div.filebrowser-node {
+    flex: 1;
+    position: relative;
+
+    margin-bottom: 2px;
+    a {
+      text-wrap: none;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      padding: 0 5px;
+      color: $DefaultTextColor;
+      display: block;
+      text-decoration: none;
+      background-color: #ECF4F7;
+    }
+
+    a:hover {
+      background-color: #D2EFFF;
+    }
+
+    input[type="checkbox"] {
+      top: 4px;
+      right: 4px;
+      position: absolute;
+    }
+  }
+
+  div.filebrowser-node-parentdir {
+    order: 0;
+  }
+
+  div.filebrowser-node-dir {
+    order: 1;
+  }
+
+  div.filebrowser-node-file {
+    order: 2;
+  }
+}
+
+
+div.action-button-strip {
+  position: relative;
+  float: right;
+  padding-right: 4px;
+
+  input.action-tagall {
+    display: inline;
+  }
+
+  /*
+  input[type="checkbox"] {
+    margin-top: 6px;
+    margin-right: 7px;
+    float: right;
+  }
+  */
+}
+

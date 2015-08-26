@@ -1,0 +1,137 @@
+@import 'lib/sass_tools';
+@import 'global_styles';
+@import 'base_text';
+
+//=============================
+//   Page View+Edit
+//=============================
+
+div#DocPage {
+  padding: 20px;
+}
+
+//=============================
+//  Page View Only
+//=============================
+
+div.DocViewContainer {
+  background-color: white;
+
+  div.Menu {
+    float: right;
+  }
+
+  div#DocContent > *:first-child {
+    margin-top: 0;
+  }
+  div#DocContent > *:last-child {
+    margin-bottom: 0;
+  }
+
+  div.button {
+    line-height: 1.25em;
+    font-size: 1.25rem;
+  }
+}
+
+//=============================
+//  Page Edit Only
+//=============================
+
+// Layout tweaks
+div.DocEditContainer {
+  background-color: white;
+
+  > div {
+    margin-right: 10px;
+  }
+  > div:last-child {
+    margin-right: 0;
+  }
+}
+
+form#DocEditForm {
+  .FormGroup {
+    margin-bottom: 10px;
+  }
+  .FormGroup:last-child {
+    margin-bottom: 0;
+  }
+}
+
+div#EditPageMainEditArea {
+  flex: 5 0px; //sets the column width.
+}
+
+div#EditPageSideColumn {
+  flex: 3 0px; //sets the column width.
+}
+
+div#DocEditFileBrowserContainer {
+  div.component-filebrowser {
+    margin-bottom: 2px;
+  }
+  div.filebrowser-header {
+    margin-bottom: 2px;
+  }
+}
+
+
+//=============================
+//  Doc Page Index
+//=============================
+
+div.PageListing {
+  padding-right:40px;
+  div.PageGrid {
+    font-size: 1rem;
+    line-height: 1.25rem;
+
+    div.PageGridItem {
+      position: relative;
+      width: 32%;
+      margin-right: 1%;
+      margin-bottom: 1.5%;
+      border-radius: 6px;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+      background-color: #fff;
+      box-sizing: border-box;
+      overflow: hidden;
+      cursor: pointer;
+      &:hover {
+        background-color: #D8D2D8;
+        * {
+          opacity: 0.75;
+        }
+      }
+      img {
+        width: 100%;
+        margin-bottom: -8px;
+        pointer-events: none;
+      }
+      h3 {
+        font-size: 1rem;
+        line-height: 1rem;
+        margin: 10px 10px 10px 10px;
+        pointer-events: none;
+      }
+      p {
+        font-size: 1rem;
+        line-height: 1.25rem;
+        margin: 0 10px 10px 10px;
+        pointer-events: none;
+      }
+      hr {
+        margin: 0.4em 0;
+        pointer-events: none;
+      }
+      div.PageName {
+        color: #9C7B98;
+        margin: 10px 10px 10px 10px;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+

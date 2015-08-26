@@ -1,0 +1,148 @@
+body {
+  font-size: 1.125em;
+  line-height: 1.5em; }
+
+h1 {
+  font-size: 1.42383em;
+  line-height: 1.0535em;
+  margin-top: 2.107em;
+  margin-bottom: 1.0535em; }
+
+h2 {
+  font-size: 1.26563em;
+  line-height: 1.18519em;
+  margin-top: 2.37037em;
+  margin-bottom: 1.18519em; }
+
+h3 {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  margin-top: 1.33333em;
+  margin-bottom: 1.33333em; }
+
+h4 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em; }
+
+p, ul, ol, pre, table, blockquote {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em; }
+
+/*
+hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+b, strong, em, small, code {
+  line-height: 1;
+}
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+sub {
+  top: 0.4em;
+}
+*/
+.footer {
+  font-size: 0.8em;
+  line-height: 1.5em; }
+
+h1, h2, h3, h4,
+product-info product-title,
+div.header-container {
+  _text-transform: uppercase;
+  font-weight: bold; }
+
+div#DocPage {
+  padding: 20px; }
+
+div.DocViewContainer {
+  background-color: white; }
+  div.DocViewContainer div.Menu {
+    float: right; }
+  div.DocViewContainer div#DocContent > *:first-child {
+    margin-top: 0; }
+  div.DocViewContainer div#DocContent > *:last-child {
+    margin-bottom: 0; }
+  div.DocViewContainer div.button {
+    line-height: 1.25em;
+    font-size: 1.25rem; }
+
+div.DocEditContainer {
+  background-color: white; }
+  div.DocEditContainer > div {
+    margin-right: 10px; }
+  div.DocEditContainer > div:last-child {
+    margin-right: 0; }
+
+form#DocEditForm .FormGroup {
+  margin-bottom: 10px; }
+form#DocEditForm .FormGroup:last-child {
+  margin-bottom: 0; }
+
+div#EditPageMainEditArea {
+  -webkit-box-flex: 5;
+  -webkit-flex: 5 0px;
+      -ms-flex: 5 0px;
+          flex: 5 0px; }
+
+div#EditPageSideColumn {
+  -webkit-box-flex: 3;
+  -webkit-flex: 3 0px;
+      -ms-flex: 3 0px;
+          flex: 3 0px; }
+
+div#DocEditFileBrowserContainer div.component-filebrowser {
+  margin-bottom: 2px; }
+div#DocEditFileBrowserContainer div.filebrowser-header {
+  margin-bottom: 2px; }
+
+div.PageListing {
+  padding-right: 40px; }
+  div.PageListing div.PageGrid {
+    font-size: 1rem;
+    line-height: 1.25rem; }
+    div.PageListing div.PageGrid div.PageGridItem {
+      position: relative;
+      width: 32%;
+      margin-right: 1%;
+      margin-bottom: 1.5%;
+      border-radius: 6px;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+      background-color: #fff;
+      box-sizing: border-box;
+      overflow: hidden;
+      cursor: pointer; }
+      div.PageListing div.PageGrid div.PageGridItem:hover {
+        background-color: #D8D2D8; }
+        div.PageListing div.PageGrid div.PageGridItem:hover * {
+          opacity: 0.75; }
+      div.PageListing div.PageGrid div.PageGridItem img {
+        width: 100%;
+        margin-bottom: -8px;
+        pointer-events: none; }
+      div.PageListing div.PageGrid div.PageGridItem h3 {
+        font-size: 1rem;
+        line-height: 1rem;
+        margin: 10px 10px 10px 10px;
+        pointer-events: none; }
+      div.PageListing div.PageGrid div.PageGridItem p {
+        font-size: 1rem;
+        line-height: 1.25rem;
+        margin: 0 10px 10px 10px;
+        pointer-events: none; }
+      div.PageListing div.PageGrid div.PageGridItem hr {
+        margin: 0.4em 0;
+        pointer-events: none; }
+      div.PageListing div.PageGrid div.PageGridItem div.PageName {
+        color: #9C7B98;
+        margin: 10px 10px 10px 10px;
+        pointer-events: none; }

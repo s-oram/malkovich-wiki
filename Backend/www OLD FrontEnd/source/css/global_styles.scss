@@ -1,0 +1,30 @@
+$DefaultTextColor: #222;
+//$FontFamily: Helvetica Neue,Helvetica,Arial,sans-serif;
+$FontFamily: Georgia,serif;
+// TODO:HIGH Need to apply CSS if webfont can be loaded, otherwise use another stylesheet
+// with CSS appropiate for Helvetica.
+//$FontFamilyHeader: 'Roboto Condensed', Helvetica Neue,Helvetica,Arial,sans-serif;
+//$FontFamilyBody: Helvetica Neue,Helvetica,Arial,sans-serif;
+$FontFamilyHeader: Georgia,serif;
+$FontFamilyBody: Georgia,serif;
+$HighlightColor: #f7535e;
+$HighlightColorR: 247;
+$HighlightColorG: 83;
+$HighlightColorB: 94;
+$HighlightColor50: rgba($HighlightColorR, $HighlightColorG, $HighlightColorB, 0.5);
+$HighlightColor10: rgba($HighlightColorR, $HighlightColorG, $HighlightColorB, 0.2);
+
+
+
+
+
+//==== Vertical Text Rhythm =====
+$BaseFontSize: 1.125em;
+$BaseLineHeight: 1.5em;
+$ScaleFactor: 1.125;
+//===============================
+
+
+
+
+

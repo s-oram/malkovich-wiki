@@ -1,0 +1,34 @@
++++
+Categories = ["Category"]
+Description = ""
+Tags = ["Tag"]
+date = "2015-04-01T16:50:39+11:00"
+menu = "main"
+title = "Document View"
+
+custom_footer_script = """
+<script src="/js/page_global.js"></script>
+<script src="/js/page_doc_view.js"></script>
+"""
+
+side_bar_content = """
+<!-- <div id="DocPageSideBar" >
+
+</div>-->
+"""
+
+custom_menu = """
+<div class="CustomPageMenu DocView_MainMenu">
+    <!-- <div id="EditDocButton" class="button icon-button"><div class="icon el el-lg el-edit"></div></div> -->
+    <div id="EditDocButton" class="MenuBarWideButton">Edit</div>
+    <div id="DocOptionsButton" class="MenuBarWideButton">Page Options</div>
+    <div id="DeleteDocButton" class="MenuBarWideButton">Delete</div>
+</div>
+"""
+
++++
+<div id="DocPage" class="DocViewContainer FGCellGrow">
+    <div id="DocContent"></div>
+</div>
+
+

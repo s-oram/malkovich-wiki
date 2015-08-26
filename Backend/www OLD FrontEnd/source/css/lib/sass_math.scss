@@ -1,0 +1,23 @@
+@function StripUnits($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+@function CastToEm($number){
+  $number: StripUnits($number);
+  @return $number * 1em;
+}
+
+@function power($number, $exp) {
+  $value: 1;
+  @if $exp > 0 {
+    @for $i from 1 through $exp {
+      $value: $value * $number;
+    }
+  }
+  @else if $exp < 0 {
+    @for $i from 1 through -$exp {
+      $value: $value / $number;
+    }
+  }
+  @return $value;
+}

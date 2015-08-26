@@ -1,0 +1,7 @@
+@mixin hidden {
+  display:none !important;
+}
+
+.hidden {
+  @include hidden();
+}

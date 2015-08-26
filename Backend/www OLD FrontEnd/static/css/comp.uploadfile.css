@@ -1,0 +1,19 @@
+div.component-uploadfile {
+  border: 2px dashed #33c3f0;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0.5em;
+  cursor: pointer; }
+  div.component-uploadfile div.component-uploadfile-ready-msg {
+    color: #33c3f0;
+    pointer-events: none; }
+
+div.component-uploadfile:hover {
+  background-color: #f1faff; }
+
+.component-uploadfile-fileinput {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0; }
