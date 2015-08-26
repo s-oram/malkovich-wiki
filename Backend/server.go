@@ -37,6 +37,7 @@ func main() {
 
 	//============= Parse Command Line Flags ===================
 	var UseStandaloneServer *bool = flag.Bool("server", false, `Launch as a standalone server.`)
+	var IsDevEnv *bool = flag.Bool("dev", false, `Run in development mode.`)
 	flag.Parse()
 	//======================
 
@@ -107,7 +108,11 @@ func main() {
 	router.POST(FileRoutes["Command_ShowFile"], filesController.ShowFile)
 
 	//=== General file handling ===
-	wwwRoot := path.Join(exeRoot, "www", "public")
+	if IsDevEnv {
+		wwwRoot := path.Join(exeRoot, "..", "Frontend", "public")
+	} else {
+		wwwRoot := path.Join(exeRoot, "www", "public")
+	}
 	wfs := webserver.New()
 	wfs.DocRoot = wwwRoot
 	router.NotFound = wfs.HandleNotFound
@@ -183,7 +188,6 @@ func runServerWithGui(chain *nigella.Nigella) {
 	}
 
 	//===== start the GUI ===========
-
 	GuiFunc := func() {
 		defer wg.Done()
 
@@ -199,7 +203,6 @@ func runServerWithGui(chain *nigella.Nigella) {
 			log.Info("EXE Root: " + exeRoot)
 		}
 
-		//ClientFilePath := filepath.Join(exeRoot, `_installer`, `bin`, `Client`, `Malkovich Client.exe`)
 		ClientFilePath := filepath.Join(exeRoot, `client`, `Malkovich Client.exe`)
 
 		ClientCmd := exec.Command(ClientFilePath, portAsString)
@@ -218,5 +221,4 @@ func runServerWithGui(chain *nigella.Nigella) {
 	wg.Wait()
 
 	log.Info("Everything has finished.")
-
 }
