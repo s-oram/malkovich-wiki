@@ -1,29 +1,3 @@
-/*
-
-
-$Menu_HalfColor: #AB9BA9;
-$Menu_34Color: #D3C1D3;
-$Menu_FullColor: #D8D2D8;
-
-div.MenuBarButton {
-  @include MenuBarElement;
-  border-color:  $Menu_HalfColor;
-  &:hover {
-    color: $Menu_FullColor;
-    cursor: pointer;
-  }
-  span.ButtonText {
-    pointer-events: none;
-  }
-}
-
-div.MenuBarFlexButton {
-  @extend div.MenuBarButton;
-  width: auto;
-}
-
-*/
-
 @mixin MenuBarElement {
   box-sizing: content-box;
   width: 1.8em;
@@ -66,7 +40,6 @@ menubar.MainMenuBar {
       margin-right: -0.3em;
     }
 
-
     width: auto;
     span.ButtonText {
       pointer-events: none;
@@ -79,6 +52,5 @@ menubar.MainMenuBar {
       color: white;
     }
   }
-
 }
 

@@ -139,31 +139,6 @@ body {
   -webkit-box-direction: normal;
           flex-direction: column; }
 
-/*
-
-
-$Menu_HalfColor: #AB9BA9;
-$Menu_34Color: #D3C1D3;
-$Menu_FullColor: #D8D2D8;
-
-div.MenuBarButton {
-  @include MenuBarElement;
-  border-color:  $Menu_HalfColor;
-  &:hover {
-    color: $Menu_FullColor;
-    cursor: pointer;
-  }
-  span.ButtonText {
-    pointer-events: none;
-  }
-}
-
-div.MenuBarFlexButton {
-  @extend div.MenuBarButton;
-  width: auto;
-}
-
-*/
 menubar.MainMenuBar {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
@@ -221,6 +196,60 @@ menubar.MainMenuBar {
       background-color: black;
       color: white; }
 
+docview {
+  margin: 8px 10px 10px 10px; }
+  docview h1 {
+    font-size: 3.0625em;
+    line-height: 1.22449em;
+    margin-top: 0.40816em;
+    margin-bottom: 0.40816em; }
+  docview h2 {
+    font-size: 1.5625em;
+    line-height: 1.6em;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em; }
+  docview h3 {
+    font-size: 1.25em;
+    line-height: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em; }
+  docview h4, docview h5, docview h6 {
+    font-size: 1em;
+    line-height: 1.25em;
+    margin-top: 1.25em;
+    margin-bottom: 1.25em; }
+  docview p, docview ul, docview ol, docview pre, docview table, docview blockquote {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em; }
+  docview code {
+    color: #111;
+    background-color: #eee;
+    font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono, DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif; }
+  docview p code {
+    padding-left: 0.25em;
+    padding-right: 0.25em; }
+  docview pre code {
+    padding: 0.25em;
+    display: block; }
+  docview blockquote {
+    background-color: #fff9e3;
+    border-left: 2px solid #ffeb8e;
+    padding: 0.5em;
+    margin: 0; }
+    docview blockquote > :first-child {
+      margin-top: 0; }
+    docview blockquote > :last-child {
+      margin-bottom: 0; }
+  docview ul ul,
+  docview ul ol,
+  docview ol ul,
+  docview ol ol {
+    margin-top: 0;
+    margin-bottom: 0; }
+
+docview > :first-child {
+  margin-top: 0; }
+
 docedit {
   display: -webkit-box;
   display: -webkit-flex;
@@ -248,7 +277,8 @@ docedit {
   -webkit-box-flex: 1;
   -webkit-flex: 1 0 auto;
       -ms-flex: 1 0 auto;
-          flex: 1 0 auto; }
+          flex: 1 0 auto;
+  margin: 2px 10px 10px 10px; }
   docedit .docedit_main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
