@@ -1,0 +1,30 @@
+<!doctype html>
+{{ partial "head.html" . }}
+
+<body>
+
+<div id="FullPageContainer" class="FGRows">
+
+
+    <div class="MainMenu FGCellShrink">
+        {{ partial "menu_bar.html" . }}
+    </div>
+
+    <div class="main-content-container FGContainer FGCellGrow">
+        {{ .Content }}
+    </div>
+
+    <div class="FooterBar FGContainer FGCellShrink">
+        {{ partial "footer_bar.html" . }}
+    </div>
+
+</div>
+
+{{ partial "footer_scripts.html" . }}
+
+{{ if isset .Params "custom_footer_script" }}
+{{ .Params.custom_footer_script | safeHtml }}
+{{end}}
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!--
+ Mustache Templates.
+ https://github.com/janl/mustache.js
+ -->
+
+<div class="filebrowser">
+    <div class="filebrowser-header">
+        <span>Files</span>
+        <div class="action-button-strip">
+            <div class="action-button button-inline button-standard" data-action="delete">Delete</div>
+            <input class="action-tagall" type="checkbox" name="tagall">
+        </div>
+    </div>
+    <div class="filebrowser-node filebrowser-node-parentdir" data-type="parentdir" data-root="">
+        <a href="/">
+            <i class="NoPointerEvents">parent directory</i>
+        </a>
+    </div>
+    {{#nodes}}
+    <div class="filebrowser-node"
+         data-type="{{type}}"
+         data-root="{{root}}"
+         data-name="{{name}}"
+         data-ext="{{ext}}" >
+
+        <a href="/" data-wikilink="{{wikilink}}">
+            {{name}}
+        </a>
+
+        <input class="action-tag" type="checkbox" name="tag">
+    </div>
+    {{/nodes}}
+</div>
+
+
+

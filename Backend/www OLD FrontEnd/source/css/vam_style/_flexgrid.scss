@@ -1,0 +1,54 @@
+
+// CSS Flex Grid Layout.
+// http://the-echoplex.net/flexyboxes/
+
+// A Guide to Flex Box
+// https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+
+@import 'lib/flexgrid';
+
+
+.FGContainer {
+  @include FGContainer;
+}
+
+.FGColumns {
+  @include FGContainer;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.FGReverseColumns {
+  @include FGContainer;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.FGRows {
+  @include FGContainer;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.FGReverseRows {
+  @include FGContainer;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+.FGCell {
+  flex: 0 1 auto;
+}
+
+.FGCellGrow {
+  flex: 1 0 auto;
+}
+
+.FGCellShrink {
+  flex: 0 1 auto;
+}

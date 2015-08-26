@@ -1,0 +1,64 @@
+div.filebrowser {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  div.filebrowser div.filebrowser-header {
+    position: relative; }
+  div.filebrowser div.filebrowser-node {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    position: relative;
+    margin-bottom: 2px; }
+    div.filebrowser div.filebrowser-node a {
+      text-wrap: none;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      padding: 0 5px;
+      color: #222;
+      display: block;
+      text-decoration: none;
+      background-color: #ECF4F7; }
+    div.filebrowser div.filebrowser-node a:hover {
+      background-color: #D2EFFF; }
+    div.filebrowser div.filebrowser-node input[type="checkbox"] {
+      top: 4px;
+      right: 4px;
+      position: absolute; }
+  div.filebrowser div.filebrowser-node-parentdir {
+    -webkit-box-ordinal-group: 1;
+    -webkit-order: 0;
+        -ms-flex-order: 0;
+            order: 0; }
+  div.filebrowser div.filebrowser-node-dir {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1; }
+  div.filebrowser div.filebrowser-node-file {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2; }
+
+div.action-button-strip {
+  position: relative;
+  float: right;
+  padding-right: 4px
+  /*
+  input[type="checkbox"] {
+    margin-top: 6px;
+    margin-right: 7px;
+    float: right;
+  }
+  */ }
+  div.action-button-strip input.action-tagall {
+    display: inline; }

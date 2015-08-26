@@ -1,0 +1,5 @@
+## PHPStorm Project Directory ##
+.idea/*
+
+## Output Directory ##
+public/*

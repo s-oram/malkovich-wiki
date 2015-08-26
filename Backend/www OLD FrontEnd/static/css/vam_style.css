@@ -1,0 +1,469 @@
+/**
+* html5doctor.com Reset Stylesheet v1.6.1 (http://html5doctor.com/html-5-reset-stylesheet/)
+* Richard Clark (http://richclarkdesign.com)
+* http://cssreset.com
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+input,
+body {
+  /* line-height:1; */
+  font-family: Georgia,serif; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+ul, ol {
+  list-style-position: outside;
+  margin-left: 1.5em; }
+
+.FGContainer {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  -webkit-box-align: stretch;
+          align-items: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column; }
+
+.FGColumns {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  -webkit-box-align: stretch;
+          align-items: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.FGReverseColumns {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  -webkit-box-align: stretch;
+          align-items: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse; }
+
+.FGRows {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  -webkit-box-align: stretch;
+          align-items: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.FGReverseRows {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  -webkit-box-align: stretch;
+          align-items: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse; }
+
+.FGCell {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto; }
+
+.FGCellGrow {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto; }
+
+.FGCellShrink {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto; }
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  line-height: 3em;
+  background-color: transparent;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #555;
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: .1rem;
+  padding: 0 1em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap; }
+  .button:hover, .button:focus,
+  button:hover,
+  button:focus,
+  input[type="submit"]:hover,
+  input[type="submit"]:focus,
+  input[type="reset"]:hover,
+  input[type="reset"]:focus,
+  input[type="button"]:hover,
+  input[type="button"]:focus {
+    border-color: #888;
+    color: #333;
+    outline: 0; }
+  .button:active,
+  button:active,
+  input[type="submit"]:active,
+  input[type="reset"]:active,
+  input[type="button"]:active {
+    box-shadow: 0 1px 0 #666, 0 1px 1px rgba(0, 0, 0, 0.9);
+    -webkit-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+        transform: translateY(3px);
+    -webkit-animation: none;
+    animation: none;
+    background-color: rgba(128, 128, 128, 0.2); }
+  .button.button-primary,
+  button.button-primary,
+  input[type="submit"].button-primary,
+  input[type="reset"].button-primary,
+  input[type="button"].button-primary {
+    background-color: #33C3F0;
+    border-color: #33C3F0;
+    color: #FFF; }
+  .button.button-primary:hover, .button.button-primary:focus,
+  button.button-primary:hover,
+  button.button-primary:focus,
+  input[type="submit"].button-primary:hover,
+  input[type="submit"].button-primary:focus,
+  input[type="reset"].button-primary:hover,
+  input[type="reset"].button-primary:focus,
+  input[type="button"].button-primary:hover,
+  input[type="button"].button-primary:focus {
+    background-color: #10aee0;
+    border-color: #10aee0;
+    color: #FFF; }
+  .button.button-primary:active,
+  button.button-primary:active,
+  input[type="submit"].button-primary:active,
+  input[type="reset"].button-primary:active,
+  input[type="button"].button-primary:active {
+    box-shadow: 0 1px 0 #666, 0 1px 1px rgba(0, 0, 0, 0.9);
+    -webkit-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+        transform: translateY(3px);
+    -webkit-animation: none;
+    animation: none;
+    background-color: #0b7798;
+    border-color: #0b7798;
+    color: #FFF; }
+
+.button * {
+  pointer-events: none; }
+
+.button-inline {
+  display: inline;
+  cursor: pointer;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  border: 1px solid transparent;
+  border-radius: 4px; }
+
+.button-standard {
+  border-color: #9daca9;
+  background-color: #e5e9e8;
+  box-shadow: inset 0 1px #fff; }
+  .button-standard:hover {
+    background-color: #F5F6F6; }
+
+.button.disabled,
+.button-inline.disabled {
+  pointer-events: none;
+  opacity: 0.25; }
+
+div.VamPopUp_Container {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: rgba(20, 20, 20, 0.85);
+  width: 100%;
+  height: 100%; }
+  div.VamPopUp_Container div.VamPopUp_DialogContainer {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); }
+
+div.VamPopUp_Container div.VamPopUp_DialogContainer {
+  padding: 10px; }
+  div.VamPopUp_Container div.VamPopUp_DialogContainer div.VamPopUp-DialogTitle {
+    margin-bottom: 0.5em; }
+  div.VamPopUp_Container div.VamPopUp_DialogContainer div.VamPopUp-DialogMessage {
+    margin-bottom: 0.5em; }
+  div.VamPopUp_Container div.VamPopUp_DialogContainer ul.VamPopUp-DialogButtons {
+    padding: 0;
+    margin: 0;
+    list-style-position: outside; }
+  div.VamPopUp_Container div.VamPopUp_DialogContainer li.VamPopUp-DialogButton {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+    background-color: transparent;
+    line-height: 1em;
+    font-size: 1em;
+    padding: 0.5em 1em;
+    margin-right: 0.5em;
+    list-style-type: none;
+    display: inline-block;
+    border-radius: 4px;
+    cursor: pointer; }
+    div.VamPopUp_Container div.VamPopUp_DialogContainer li.VamPopUp-DialogButton:last-of-type {
+      margin-right: 0; }
+    div.VamPopUp_Container div.VamPopUp_DialogContainer li.VamPopUp-DialogButton:hover {
+      background-color: rgba(0, 0, 0, 0.25); }
+    div.VamPopUp_Container div.VamPopUp_DialogContainer li.VamPopUp-DialogButton:active {
+      box-shadow: 0 1px 0 #666, 0 1px 1px rgba(0, 0, 0, 0.9);
+      -webkit-transform: translateY(3px);
+      -ms-transform: translateY(3px);
+          transform: translateY(3px);
+      -webkit-animation: none;
+      animation: none; }
+  div.VamPopUp_Container div.VamPopUp_DialogContainer li.VamPopUp-DialogButton.Delete {
+    background-color: red;
+    color: white; }
+    div.VamPopUp_Container div.VamPopUp_DialogContainer li.VamPopUp-DialogButton.Delete:hover {
+      background-color: rgba(255, 0, 0, 0.5); }
+  div.VamPopUp_Container div.VamPopUp_DialogContainer li.VamPopUp-DialogButton.Ok {
+    background-color: #007FFF;
+    color: white; }
+    div.VamPopUp_Container div.VamPopUp_DialogContainer li.VamPopUp-DialogButton.Ok:hover {
+      background-color: rgba(0, 127, 255, 0.5); }
+
+div.VamPopUp_Container div.VamPopUp_DialogContainer input.VamPopUp-InputText {
+  font-size: 1em;
+  margin-top: -0.25em;
+  margin-bottom: 0.5em; }
+
+.debug1 {
+  background-color: #add8e6; }
+
+.debug2 {
+  background-color: #f08080; }
+
+.debug3 {
+  background-color: #e0ffff; }
+
+.debug4 {
+  background-color: #d3d3d3; }

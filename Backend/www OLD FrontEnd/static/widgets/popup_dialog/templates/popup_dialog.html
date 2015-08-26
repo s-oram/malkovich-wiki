@@ -1,0 +1,23 @@
+<div class="VamPopUp_Container">
+    <div class="VamPopUp_DialogContainer">
+        <div class="VamPopUp-Content">
+            {{#DialogTitle}}
+            <div class="VamPopUp-DialogTitle">{{{DialogTitle}}}</div>
+            {{/DialogTitle}}
+
+            {{#DialogMessage}}
+            <div class="VamPopUp-DialogMessage">{{{DialogMessage}}}</div>
+            {{/DialogMessage}}
+
+            <ul class="VamPopUp-DialogButtons">
+                <!-- HACK: Add comment strings between li elements to prevent spaces in the
+                final layout. -->
+                <!--
+                {{#Buttons}}
+                    --><li class="VamPopUp-DialogButton {{type}}">{{caption}}</li><!--
+                {{/Buttons}}
+                -->
+            </ul>
+        </div>
+    </div>
+</div>

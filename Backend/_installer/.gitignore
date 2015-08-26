@@ -1,0 +1,8 @@
+
+## Ignore all files in the "wwww" directory. They will be copied into the folder when 
+## release version is built.
+bin/www/*
+
+## Ignore the Malkovich executable. It will be copied into the directory when the 
+## release version is built.
+bin/Malkovich.exe

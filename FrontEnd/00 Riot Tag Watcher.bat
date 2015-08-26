@@ -1,0 +1,1 @@
+riot -w --type es6 public/tags
