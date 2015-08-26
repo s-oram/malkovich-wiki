@@ -1,12 +1,12 @@
 :: Start the node LiveReload server for the frontend.
-cd www
+cd ../Frontend
 start cmd /k node dev_server
-cd ..
+cd ../Backend
 
 :: Start the riotjs tag compiler. (It watches for tag changes.)
-cd www
+cd ../Frontend
 start cmd /k riot -w --type es6 public/tags
-cd ..
+cd ../Backend
 
 :: Start fswatch. Go server will restart on changes.
 start cmd /k fswatch
