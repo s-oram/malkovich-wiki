@@ -1,0 +1,51 @@
+# About Malkovich
+
+Malkovich is a personal wiki that runs on your desktop computer. It's built to be simple to use. It doesn't require installation of a server or a database. 
+
+Motivation for the project came from personal experience. I've been using a MediaWiki instance installed on a private server for several years. I find the wiki format to be great for storing small bits of information in a structured manner. However, MediaWiki is overly complicated for a personal wiki. Installation is complicated and requires running PHP and MySQL. Backup is difficult as well. 
+
+By contrast Malkovich is installed using a single installer just like a typical desktop application. Malkovich is also easy to backup because all data is saved in files. You can use your existing backup tools and workflow. 
+
+Malkovich pages are written using Markdown with some syntax additions to support wiki functionality. 
+
+# Development Summary
+
+Malkovich consists of two main parts.
+
+1. A backend HTTP server written in Go.
+2. A single page html & js application that acts as a GUI. The html & js is wrapped into an executable using Electron. 
+
+Ideally the split between the front and back end will be transparent to the user. 
+
+## Organisation of Project Files
+
+Malkovich is my first application built using HTML, JS and Go. As such the code and file organisation isn't ideal. I'm still researching standard organisational stratagies and working out what would be suitable for this project. 
+
+The client side especially needs to be improved. 
+
+* The CSS is pretty haphazard. It's being built up incrementally. I'm not sure if it will be difficult to maintain in the long term. 
+* The file organisation needs to be improved. The source files for custom Riot.js elements are in two locations. 
+* I need to standardise on build tools. Right now Koala is being used for SCSS compilation. It would be better to use node.js instead. 
+* The project developement is automated with a collection of BAT file and node.js scripts. I will probably phase out the majority of the BAT files and use node.js instead. 
+
+While the project source is a bit disorganised, progress is being made. Orignally, the frontend had minimal structure and used jquery extensively. Even with a limited number of features, the frontend was turning into an unmaintable mess. Each bit of new functionality was becoming exponentially more difficult to include. 
+
+Since then I've rewritten much of the frontend using Riot.js. The frontend now runs as a single page HTML application. GUI functionality is split between several loosely coupled web components.
+
+Overall, using Riot.js has been an eye opener. With Riot.js I feel like I'm building an "application", not a webpage. The frontend code has more structure and feels much more extenable. Already I've added new functionality that would have been very difficult with the old jquery centric GUI. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

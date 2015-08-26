@@ -1,0 +1,7 @@
+==== High Priority ====
+- Malkovich client window needs an icon.
+- Malkovich client window needs to display the correct page title in the window frame.
+
+==== Medium Priority ====
+
+==== Low Priority ====
