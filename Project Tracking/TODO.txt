@@ -2,6 +2,9 @@
 - Malkovich client window needs an icon.
 - Malkovich client window needs to display the correct page title in the window frame.
 
+- Needs a way to show where the wiki files are stored on disc. 
+
+
 ==== Medium Priority ====
 
 ==== Low Priority ====

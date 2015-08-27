@@ -246,6 +246,8 @@ docview {
   docview ol ol {
     margin-top: 0;
     margin-bottom: 0; }
+  docview img {
+    max-width: 100%; }
 
 docview > :first-child {
   margin-top: 0; }
