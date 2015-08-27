@@ -2,9 +2,7 @@
      Changes for next release
 ======================================================
 
-
-
-
+* Images are limited to 100% width in the document view.
 
 ======================================================
      History
