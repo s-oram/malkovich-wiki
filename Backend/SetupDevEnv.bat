@@ -5,7 +5,7 @@ cd ../Backend
 
 :: Start the riotjs tag compiler. (It watches for tag changes.)
 cd ../Frontend
-start cmd /k riot -w --type es6 public/tags
+start cmd /k riot -w --type es6 source/tags public/tags
 cd ../Backend
 
 :: Start fswatch. Go server will restart on changes.
