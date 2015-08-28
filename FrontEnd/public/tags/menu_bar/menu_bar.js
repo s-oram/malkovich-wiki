@@ -1,6 +1,5 @@
 riot.tag('menubar', '<div class="FGColumns WikiMenu"> <div if="{!DataStores.PageData.IsIndexPage}" class="MenuBarFlexButton HomeButton"> <span class="ButtonText">Home</span> </div> <div id="PageTitle" class="MenuBarElement"> { \'#\' + DataStores.PageData.PageName } </div> </div> <div class="FGColumns PageMenu"> <div class="MenuBarFlexButton EditDocButton"> <span class="ButtonText">Edit</span> </div> <div class="MenuBarFlexButton SettingsButton"> <span class="ButtonText">Settings</span> </div> </div>', function(opts) {
 "use strict";
-console.log(this);
 var self = this;
 ExtendRiotTag(self, RiotTagEx_VisibleProperty);
 ExtendRiotTag(self, RiotTagEx_GlobalOptions);
