@@ -22,7 +22,6 @@ Malkovich consists of two main parts.
 Malkovich is my first application built using HTML, JS and Go. As such the code and file organisation isn't ideal. The front end code in particular is a bit messy. 
 
 * The CSS is pretty haphazard. It's been built up incrementally. I'm not sure if it will be difficult to maintain in the long term. 
-* The file organisation needs to be improved. The source files for custom Riot.js elements are in two locations. They probably need to be consolidated into one location.
 * I need to standardise on build tools. Right now Koala is being used for SCSS compilation. It would be better to use node.js instead. 
 * The project developement is automated with a collection of BAT file and node.js scripts. I will probably phase out the majority of the BAT files and use node.js instead. 
 

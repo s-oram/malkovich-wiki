@@ -1,10 +1,13 @@
 ==== High Priority ====
-- Malkovich client window needs an icon.
 - Malkovich client window needs to display the correct page title in the window frame.
 
-- Needs a way to show where the wiki files are stored on disc. 
 
+Look at suit naming convention.
+- https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md
 
 ==== Medium Priority ====
+- Needs a way to show where the wiki files are stored on disc. 
+
+- Malkovich client window needs an icon.
 
 ==== Low Priority ====
