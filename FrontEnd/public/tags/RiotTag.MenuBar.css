@@ -1,0 +1,64 @@
+menubar.MainMenuBar {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 10px;
+  border-bottom: 1px solid lightgrey; }
+  menubar.MainMenuBar div.MenuBarElement {
+    box-sizing: content-box;
+    width: 1.8em;
+    height: 1.4em;
+    border-radius: 3px;
+    line-height: 1.4em;
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+    width: auto; }
+    menubar.MainMenuBar div.MenuBarElement:first-of-type {
+      margin-left: 0; }
+    menubar.MainMenuBar div.MenuBarElement:last-of-type {
+      margin-right: 0; }
+  menubar.MainMenuBar div.MenuBarFlexButton {
+    box-sizing: content-box;
+    width: 1.8em;
+    height: 1.4em;
+    border-radius: 3px;
+    line-height: 1.4em;
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+    padding: 0 0.3em;
+    margin-left: -0.05em;
+    margin-right: -0.05em;
+    width: auto;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
+    menubar.MainMenuBar div.MenuBarFlexButton:first-of-type {
+      margin-left: 0; }
+    menubar.MainMenuBar div.MenuBarFlexButton:last-of-type {
+      margin-right: 0; }
+    menubar.MainMenuBar div.MenuBarFlexButton:first-of-type {
+      margin-left: -0.3em; }
+    menubar.MainMenuBar div.MenuBarFlexButton:last-of-type {
+      margin-right: -0.3em; }
+    menubar.MainMenuBar div.MenuBarFlexButton span.ButtonText {
+      pointer-events: none; }
+    menubar.MainMenuBar div.MenuBarFlexButton:hover {
+      background-color: black;
+      color: white; }
+
+menubar.FixedMenuBar {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background-color: white; }
+
+/*# sourceMappingURL=RiotTag.MenuBar.css.map */
