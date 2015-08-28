@@ -24,20 +24,13 @@
     <div id="FullPageContainer" class="FGContainerGrow FGRows">
 
 
-        <menubar></menubar>
+        <!-- NOTE: HACK: The menu bar is duplicated so that the second, fixed,
+        menu bar doesn't overlap the content below. There might be a better way.  -->
+        <menubar class="MainMenuBar FGColumns"></menubar>
+        <menubar class="MainMenuBar FGColumns FixedMenuBar"></menubar>
+
         <docview></docview>
         <docedit></docedit>
-
-        <!--
-        <div class="FGCellShrink">
-            <menubar></menubar>
-        </div>
-        <div class="main-content-container FGContainer FGCellGrow">
-            <docview></docview>
-            <docedit></docedit>
-        </div>
-        -->
-
     </div>
 
     <!-- Include all the riot pop-up dialogs here -->

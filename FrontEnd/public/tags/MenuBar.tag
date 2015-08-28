@@ -1,4 +1,4 @@
-<menubar class="MainMenuBar FGColumns">
+<menubar>
     <div class="FGColumns WikiMenu">
         <div if={!DataStores.PageData.IsIndexPage} class="MenuBarFlexButton HomeButton">
             <span class="ButtonText">Home</span>
@@ -19,6 +19,8 @@
 
     <script>
         "use strict";
+        console.log(this);
+        return;
         var self = this;
         ExtendRiotTag(self, RiotTagEx_VisibleProperty);
         ExtendRiotTag(self, RiotTagEx_GlobalOptions);
