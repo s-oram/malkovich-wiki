@@ -1,25 +1,32 @@
-# About Malkovich
+# Malkovich
 
-Malkovich is a personal wiki that runs on Windows. It's built to be self contained for simple installation.
+Malkovich is a personal note keeping application for Windows. 
 
-The wiki pages are written in markdown with some syntax additions to support wiki functionality. All context is stored in markdown formatted text files. 
+* Notes are written in Markdown and automatically converted to HTML for display. 
+* Notes can link to other notes for basic wiki-like functionality. (Links are created with double square brackets. `[[Example]]`)
+* Malkovich is like a web application except it is installed locally and all data is kept on your machine. A small console application runs a server in the background. The Malkovich GUI is shown in your browser. 
+* Malkovich is super snappy when reading and editing notes because all data is stored locally, not in the cloud. 
+* Malkovich notes remain available when your internet connection fails. 
 
 ## Motivation 
 
-I've been using a MediaWiki instance installed on a private server for several years. I find the wiki format to be great for storing small bits of information in a structured manner. However, MediaWiki is not ideal for a personal wiki. Installation is complicated and requires running PHP and MySQL. Backup is difficult as well. 
+I'd been using a MediaWiki instance installed on a private server for several years to keep personal notes. (I think the wiki format is ideal for certain things.) However MediaWiki isn't ideal for personal use. It's complicated to install, difficult to maintain and backup. I couldn't store private information because I didn't trust the overall security of my server. There's too many vulnabilities and I'm not a web security expert. I tried out a couple alternatives to MediaWiki but nothing stuck.
+
+Eventually I decided to create Malkovich as my needs are pretty modest and it seemed a good opurtunity to learn more about Go, HTML and Javascript. 
 
 ## Under the Hood 
 
 Malkovich consists of two main parts.
 
 1. A backend HTTP server written in Go.
-2. A single page HTML & JS application that acts as a GUI. 
+2. A GUI written in HTML and Javascript that is displayed in a browser. 
 
-Originally Malkovich was presented as a standalone Windows Application. Electron was being used to wrap the HTML and JS into an executable however performance was slow. Now Malkovich runs as a server and the browser (Chrome, Firefox etc) is used to view the Malkovich wiki. 
+The original plan was to bundle it all up into a standalone application with Electron or similar. However once bundled performance took a big hit and there were a few other small niggles. 
 
-## Other Notes
+## Project Status
 
-Malkovich is my first application built using HTML, JS and Go. As such the code and file organisation isn't ideal. The front end code in particular is something I would like to improve in future iterations. 
+Malkovich is a small side project. It's something I find useful and provides learning oppurtunities. There is no immediate plan to distribute it to a wider audience. 
 
-Where possible repetivitive development tasks have been automated with BAT and NodeJS scripts. The scripts were largely repurposed from other projects, hence being split between BAT and NodeJS. If this was more than a side project I would like to standardise on using one scripting language. 
+I'm currently rewriting the frontend in Vue.js. Originally the frontend was developed with Riot.js. 
+
 
