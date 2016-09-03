@@ -8,7 +8,8 @@ Malkovich is a personal note keeping application for Windows.
 * Malkovich is super snappy when reading and editing notes because all data is stored locally, not in the cloud. 
 * Malkovich notes remain available when your internet connection fails. 
 
-![Malkovich Screenshot](/readme/screenshot.png?raw=true) 
+![Malkovich Screenshot](/readme/screenshot.png?raw=true)
+*Malkovich with a page open for reading and editing side by side.*
 
 
 ## Motivation 
