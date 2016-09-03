@@ -4,7 +4,7 @@ Malkovich is a personal note keeping application for Windows.
 
 * Notes are written in Markdown and automatically converted to HTML for display. 
 * Notes can link to other notes for basic wiki-like functionality. (Links are created with double square brackets. `[[Example]]`)
-* Malkovich is like a web application except it is installed locally and all data is kept on your machine. A small console application runs a server in the background. The Malkovich GUI is shown in your browser. 
+* Malkovich runs in the browser like a web application except it is installed locally. 
 * Malkovich is super snappy when reading and editing notes because all data is stored locally, not in the cloud. 
 * Malkovich notes remain available when your internet connection fails. 
 
