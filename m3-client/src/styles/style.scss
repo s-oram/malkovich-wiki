@@ -1,0 +1,25 @@
+@import 'tachyons/tachyons.css';
+@import 'components/components.scss';
+
+html, body, div#root {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 110%;
+}
+
+/* Debug Styles */
+
+.d-outline1 { outline: 1px solid  rgb(101, 197, 204)!important; }
+.d-outline2 { outline: 1px solid  rgb(204, 193, 91)!important; }
+.d-outline3 { outline: 1px solid  rgb(104, 92, 211)!important; }
+.d-outline4 { outline: 1px solid  rgb(188, 100, 214)!important; }
+.d-outline5 { outline: 1px solid  rgb(189, 61, 93)!important; }
+
+.d-fill1 { background-color: rgb(101, 197, 204)!important; }
+.d-fill2 { background-color: rgb(204, 193, 91)!important; }
+.d-fill3 { background-color: rgb(104, 92, 211)!important; }
+.d-fill4 { background-color: rgb(188, 100, 214)!important; }
+.d-fill5 { background-color: rgb(189, 61, 93)!important; }

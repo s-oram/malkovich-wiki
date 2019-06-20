@@ -1,0 +1,39 @@
+{
+  "name": "m3-server",
+  "version": "1.0.0",
+  "description": "Malkovich 3 Server",
+  "main": "dist/app.js",
+  "bin": {
+    "malkovich-3": "./dist/app.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "prebuild": "npm run lint",
+    "lint": "tslint -c tslint.json -p tsconfig.json --fix",
+    "start": "npm-run-all -p build:watch dev:run-server",
+    "dev:run-server": "nodemon --watch dist --exec \"malkovich-3 --path ../notes\""
+  },
+  "author": "Shannon Oram <npm.shannon@gmail.com> (https://github.com/s-oram)",
+  "license": "MIT",
+  "dependencies": {
+    "@types/cors": "^2.8.5",
+    "commander": "^2.20.0",
+    "cors": "^2.8.5",
+    "cross-fetch": "^3.0.2",
+    "express": "^4.17.0",
+    "express-reload": "^1.2.0",
+    "fs-extra": "^8.0.1",
+    "open": "^6.3.0",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.1",
+    "@types/fs-extra": "^7.0.0",
+    "@types/node": "^12.0.2",
+    "nodemon": "^1.19.0",
+    "npm-run-all": "^4.1.5",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5"
+  }
+}

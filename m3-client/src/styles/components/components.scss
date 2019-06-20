@@ -1,0 +1,18 @@
+[data-component~="button"] {
+  border: 1px solid black;
+  border-radius: var(--spacing-extra-small);
+  padding: var(--spacing-extra-small) var(--spacing-small);
+  margin-right: var(--spacing-small);
+  cursor: pointer;
+
+  &[data-component~="--primary"] {
+    border-color: var(--dark-blue);
+    background-color: var(--light-blue);
+  }
+
+  &[data-component~="--warning"] {
+    border-color: var(--dark-red);
+    background-color: var(--light-red);
+  }
+}
+
