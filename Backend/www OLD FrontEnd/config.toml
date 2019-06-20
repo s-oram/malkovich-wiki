@@ -1,7 +1,0 @@
-baseurl = "http://micronote/"
-languageCode = "en-us"
-title = "MicroNote"
-
-contentdir = "content"
-layoutdir = "layouts"
-publishdir = "public"
