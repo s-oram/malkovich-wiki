@@ -1,4 +1,5 @@
 import React, { Fragment, ReactNode } from 'react';
+import styles from './dialog-wrapper.module.scss';
 
 interface DialogWrapperProps {
   isVisible?: boolean;
@@ -10,8 +11,10 @@ export const DialogWrapper = (props: DialogWrapperProps) => {
     ? true
     : props.isVisible;
 
+  const dialogWrapperStyle = styles.dialogWrapper + " absolute w-100 h-100 tc";
+
   const output = isVisible
-    ? <div className="absolute w-100 h-100 tc bg-silver">{props.children}</div>
+    ? <div className={dialogWrapperStyle}>{props.children}</div>
     : null;
 
   return (
