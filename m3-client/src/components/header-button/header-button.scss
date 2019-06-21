@@ -1,0 +1,16 @@
+// TODO:MED Choose better colors for the buttons instead of black and white!
+
+.HeaderButton {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: .125rem;
+  padding: 0 var(--spacing-extra-small);
+  &:hover {
+    color: white;
+    background-color: black;
+  }
+}
+
+.HeaderButton-Icon {
+  margin-right: 0.125rem;
+}

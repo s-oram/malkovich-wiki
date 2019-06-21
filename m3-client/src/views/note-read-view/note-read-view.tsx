@@ -1,5 +1,4 @@
 import React from 'react';
-import './note-read-view.scss';
 import { actions, useGlobalState } from '../../store';
 import { MarkDownNote } from '../../components/markdown-note';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,6 +6,7 @@ import { WelcomeSlug, PageSlug } from './components/slug';
 import { NoteViewStatus } from '../../components/note-status/note-status';
 import { readNoteStatus } from '../../utils/read-note-status';
 import { DialogWrapper } from '../../components/dialog-wrapper/dialog-wrapper';
+import { HeaderButton } from '../../components/header-button/header-button';
 
 interface Props {
   pageId: string;
@@ -67,14 +67,8 @@ export const NoteReadView = (props: Props) => {
         </div>
 
         <div>
-          <div data-component="inline-button" className="mr1" onClick={handleEditClick}>
-            <FontAwesomeIcon icon="edit" size="xs"></FontAwesomeIcon>
-            <span>Edit</span>
-          </div>
-          <div data-component="inline-button" onClick={handleDeleteClick}>
-            <FontAwesomeIcon icon="edit" size="xs"></FontAwesomeIcon>
-            <span>Delete</span>
-          </div>
+          <HeaderButton text="Edit" icon="edit" onClick={handleEditClick}></HeaderButton>
+          <HeaderButton text="Delete" icon="edit" onClick={handleDeleteClick}></HeaderButton>
         </div>
       </div>
 
