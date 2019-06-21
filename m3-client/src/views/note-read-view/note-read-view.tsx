@@ -46,7 +46,7 @@ export const NoteReadView = (props: Props) => {
   }
 
   return (
-    <div className="NoteView flex flex-column">
+    <div className="w-100 h-100 overflow-auto flex flex-column">
       <DialogWrapper isVisible={isDeleteConfirmationVisible || false}>
         <div className="pa3 mt3 bg-white dib br2">
           <div className="mb3">
