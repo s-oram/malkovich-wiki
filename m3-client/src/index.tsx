@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import { GlobalStateProvider } from './store';
 import Router from './router';
 
-
+console.log('App Start');
 
 Router.init();
 

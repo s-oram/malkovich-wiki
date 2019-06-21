@@ -3,6 +3,7 @@ import { Action } from "./actions";
 import { UnreachableCaseError } from "../utils/unreachable-case-error";
 import { produce } from "immer";
 import { RequestStatus } from "./data-types";
+import { isPageRoute } from "../app-route";
 
 export function reduce(state: State, action: Action): State {
 
@@ -24,7 +25,13 @@ export function reduce(state: State, action: Action): State {
 
         case 'setAppRoute':
             return produce(state, draft => {
-                draft.route = action.value;
+                const oldPageRouteId = isPageRoute(state.route) && state.route.pageId;
+                const newPageRouteId = isPageRoute(action.route) && action.route.pageId;
+                if (oldPageRouteId !== newPageRouteId) {
+                    draft.note = null;
+                    draft.deletePageDialog = null;
+                }
+                draft.route = action.route;
             });
 
         case 'setEdit':
@@ -91,7 +98,7 @@ export function reduce(state: State, action: Action): State {
 
         case 'DeletePage.Success':
             return produce(state, draft => {
-                // TODO:HIGH
+                draft.deletePageDialog!.deleteStatus = RequestStatus.Ok;
             });
 
         case 'DeletePage.Failure':

@@ -3,5 +3,14 @@
 		{
 			"path": "m3-client"
 		}
-	]
+	],
+	"settings": {
+		"files.exclude": {
+			"**/build/**": true
+		},
+		"files.watcherExclude": {
+			"**/build/**": true
+		},
+		"workbench.editor.centeredLayoutAutoResize": false
+	}
 }

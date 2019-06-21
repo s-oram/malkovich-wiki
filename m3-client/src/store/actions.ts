@@ -2,12 +2,13 @@ import { Dispatch } from "react-hooks-global-state";
 import { MarkdownNote } from "./data-types";
 import { apiEndpoint } from "../config";
 import { AppRoute } from "../app-route";
+import page from 'page';
 
 export type Action =
     | { type: 'increment' }
     | { type: 'decrement' }
     | { type: 'setCount'; value: number }
-    | { type: 'setAppRoute'; value: AppRoute | null }
+    | { type: 'setAppRoute'; route: AppRoute | null }
     | { type: 'setEdit'; isEditing: boolean }
     | { type: 'LoadNote.Request'; id: string | undefined }
     | { type: 'LoadNote.Success'; data: MarkdownNote | null }
@@ -33,15 +34,15 @@ function createDeletePageActions(dispatch: Dispatch<Action>) {
         },
 
         deletePage: async (pageId: string) => {
-            dispatch({ type: 'DeletePage.Request', pageId: pageId })
-
+            dispatch({ type: 'DeletePage.Request', pageId: pageId });
             const endPoint = `${apiEndpoint}/api/notes/${encodeURI(pageId)}`;
             const method = 'DELETE';
             const response = await fetch(endPoint, { method });
             if (response.status === 200) {
-                dispatch({ type: 'DeletePage.Success', pageId })
+                dispatch({ type: 'DeletePage.Success', pageId });
+                page.redirect('/');
             } else {
-                dispatch({ type: 'DeletePage.Failure', pageId, errorMessage: 'Something went wrong.' })
+                dispatch({ type: 'DeletePage.Failure', pageId, errorMessage: 'Something went wrong.' });
             }
         },
     }
@@ -62,7 +63,7 @@ export function createActions(dispatch: Dispatch<Action>) {
         },
 
         setAppRoute: (value: AppRoute | null) => {
-            dispatch({ type: 'setAppRoute', value: value });
+            dispatch({ type: 'setAppRoute', route: value });
         },
 
         setEdit: (isEditing: boolean) => {

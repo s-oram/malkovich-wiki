@@ -8,7 +8,7 @@ export interface State {
     text: string | undefined;
     name: string | undefined;
     route: AppRoute | null;
-    note?: {
+    note: null | {
         id: string | undefined;
         data?: MarkdownNote | null;
         // ReadStatus will be used when requesting the note data from the server.
@@ -21,7 +21,7 @@ export interface State {
     isEditing: boolean;
     deletePageDialog: null | {
         pageId: string;
-        deleteStatus?: RequestStatus.Pending | RequestStatus.Error;
+        deleteStatus?: RequestStatus;
     };
 }
 
@@ -30,7 +30,7 @@ export const initialState: State = {
     text: undefined,
     name: undefined,
     route: null,
-    note: undefined,
+    note: null,
     isEditing: false,
     deletePageDialog: null,
 }

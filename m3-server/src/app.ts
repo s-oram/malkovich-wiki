@@ -5,7 +5,6 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import fs from 'fs-extra';
 import cors from 'cors';
-
 import path from 'path';
 import { isServerRunning, openBrowser } from './app-utils';
 
@@ -63,6 +62,7 @@ async function startApp() {
         });
 
         app.get('/api/notes/:id', async (req, res) => {
+            // TODO:HIGH Ensure the document is contained within the docPath directory.
             const filepathA = path.join(docPath, req.params.id, `index.md`);
             const filepathB = path.join(docPath, req.params.id, `meta.json`);
             try {
@@ -83,23 +83,37 @@ async function startApp() {
                 }
             } catch (error) {
                 console.log(error);
-                res.json({ error: error.name});
-                res.status(500).send();
+                res.status(500).json({ error: error.name });
             }
         });
 
         app.put('/api/notes/:id', async (req, res) => {
+            // TODO:HIGH Ensure the document is contained within the docPath directory.
+            const directory = path.join(docPath, req.params.id);
             const filepathA = path.join(docPath, req.params.id, `index.md`);
             try {
+                await fs.mkdir(directory);
                 // TODO:MED We need to validate the json schema here.
                 const text = req.body.text;
                 await fs.writeFile(filepathA, text);
                 res.status(200).json({ status: 'hello world'});
             } catch (error) {
                 console.log(error);
-                res.json({ error: error.name });
-                res.status(500);
+                res.status(500).json({ error: error.name });
             }
+        });
+
+        app.delete('/api/notes/:id', async (req, res) => {
+            // TODO:HIGH Ensure the directory is contained within the docPath directory.
+            const directory = path.join(docPath, req.params.id);
+            try {
+                await fs.remove(directory);
+                res.status(200).send();
+            } catch (error) {
+                console.log(error);
+                res.status(500).json({ error: error.name });
+            }
+
         });
 
         app.get('/', (req, res) => {
