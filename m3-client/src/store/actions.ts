@@ -5,9 +5,6 @@ import { AppRoute } from "../app-route";
 import page from 'page';
 
 export type Action =
-    | { type: 'increment' }
-    | { type: 'decrement' }
-    | { type: 'setCount'; value: number }
     | { type: 'setAppRoute'; route: AppRoute | null }
     | { type: 'setEdit'; isEditing: boolean }
     | { type: 'LoadNote.Request'; id: string | undefined }
@@ -50,18 +47,6 @@ function createDeletePageActions(dispatch: Dispatch<Action>) {
 
 export function createActions(dispatch: Dispatch<Action>) {
     return {
-        increment: () => {
-            dispatch({ type: 'increment' });
-        },
-
-        decrement: () => {
-            dispatch({ type: 'decrement'});
-        },
-
-        reset: (value: number) => {
-            dispatch({ type: 'setCount', value: value });
-        },
-
         setAppRoute: (value: AppRoute | null) => {
             dispatch({ type: 'setAppRoute', route: value });
         },

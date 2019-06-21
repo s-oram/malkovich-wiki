@@ -4,9 +4,6 @@ import { AppRoute } from "../app-route";
 // import { MarkdownNote } from "../data-types";
 
 export interface State {
-    count: number;
-    text: string | undefined;
-    name: string | undefined;
     route: AppRoute | null;
     note: null | {
         id: string | undefined;
@@ -26,9 +23,6 @@ export interface State {
 }
 
 export const initialState: State = {
-    count: 0,
-    text: undefined,
-    name: undefined,
     route: null,
     note: null,
     isEditing: false,

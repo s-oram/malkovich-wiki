@@ -8,20 +8,6 @@ import { isPageRoute } from "../app-route";
 export function reduce(state: State, action: Action): State {
 
     switch (action.type) {
-        case 'increment':
-            return produce(state, draft => {
-                draft.count = draft.count + 1;
-            });
-
-        case 'decrement':
-            return produce(state, draft => {
-                draft.count = draft.count - 1;
-            });
-
-        case 'setCount':
-            return produce(state, draft => {
-                draft.count = action.value;
-            });
 
         case 'setAppRoute':
             return produce(state, draft => {
