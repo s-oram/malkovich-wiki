@@ -26,7 +26,3 @@ Malkovich consists of two main parts.
 2. A GUI written in HTML and Javascript that is displayed in a browser. 
 
 The original plan was to bundle it all up into a standalone application with Electron or similar. However once bundled performance took a big hit and there were a few other small niggles. 
-
-## Project Status
-
-Malkovich is a small side project. It's something I use daily and it provides useful learning opportunities. There are no immediate plans to distribute it to a wider audience. 
