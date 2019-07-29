@@ -14,7 +14,7 @@ Malkovich is a personal note keeping application for Windows.
 
 ## Motivation 
 
-I'd been using a MediaWiki instance installed on a private server for several years to keep personal notes. (I think the wiki format is ideal for certain things.) However MediaWiki isn't ideal for personal use. It's complicated to install, difficult to maintain and backup. I couldn't store private information because I didn't trust the overall security of my server. There's too many vulnerabilities and I'm not a web security expert. I tried out a couple alternatives to MediaWiki but nothing stuck.
+I'd been using a MediaWiki instance installed on a private server for several years to keep personal notes. However MediaWiki isn't ideal for personal use. It's complicated to install, difficult to maintain and backup. I couldn't store private information because I didn't trust the overall security of my server. There's too many vulnerabilities and I'm not a web security expert. I tried out a couple alternatives to MediaWiki but nothing stuck.
 
 Eventually I decided to create Malkovich as my needs are pretty modest and it seemed a good opportunity to learn more about Go, HTML and Javascript . 
 
