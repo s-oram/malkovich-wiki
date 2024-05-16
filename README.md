@@ -28,4 +28,4 @@ Malkovich consists of two main parts:
 
 ## Discontinued 
 
-Development on this project has stopped. [Obsidian](https://obsidian.md) does everything this app does and looks a whole better.  
+Development on this project has stopped. I now use [Obsidian](https://obsidian.md) as it does everything Malkovich does and looks a whole better.  
