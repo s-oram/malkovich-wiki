@@ -9,7 +9,8 @@ Malkovich is a personal note keeping application for Windows.
 * Notes remain available when your internet connection fails. 
 
 ![Malkovich Screenshot](/readme/screenshot.png?raw=true)
-*Malkovich with a page open for reading and editing side by side.*
+*Malkovich's reading and editing views, shown on the left and right.*
+
 
 
 ## Motivation 
